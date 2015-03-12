@@ -570,8 +570,8 @@ function woocommerce_bitpay_init()
 
             $this->log('    [Info] Generating payment form for order ' . $order->get_order_number() . '. Notify URL: ' . $this->notification_url);
 
-            // Mark as on-hold (we're awaiting the payment)
-            $order->update_status('on-hold', 'Awaiting payment notification from BitPay.');
+            // Mark as payment pending (we're awaiting the payment)
+            $order->update_status('pending', 'Awaiting payment notification from BitPay.');
 
             $thanks_link = $this->get_return_url($order);
 
