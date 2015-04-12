@@ -6,7 +6,7 @@
     Author:      bitpay
     Author URI:  https://bitpay.com
 
-    Version:           2.2.4
+    Version:           2.2.5
     License:           Copyright 2011-2014 BitPay Inc., MIT License
     License URI:       https://github.com/bitpay/woocommerce-plugin/blob/master/LICENSE
     GitHub Plugin URI: https://github.com/bitpay/woocommerce-plugin
@@ -438,7 +438,7 @@ function woocommerce_bitpay_init()
             $this->log('    [Info] Entered save_order_states()...');
 
             $bp_statuses = array(
-                'new'      => 'New Order',
+                'new'      => 'New Order',            	
                 'paid'      => 'Paid',
                 'confirmed' => 'Confirmed',
                 'complete'  => 'Complete',
@@ -872,7 +872,6 @@ function woocommerce_bitpay_init()
 
             $order_states = $this->get_option('order_states');
 
-            $new_order_status      = $order_states['new'];
             $paid_status      = $order_states['paid'];
             $confirmed_status = $order_states['confirmed'];
             $complete_status  = $order_states['complete'];
@@ -1379,7 +1378,7 @@ function woocommerce_bitpay_activate()
             }
         }
 
-        update_option('woocommerce_bitpay_version', '2.2.4');
+        update_option('woocommerce_bitpay_version', '2.2.5');
 
     } else {
         // Requirements not met, return an error message
