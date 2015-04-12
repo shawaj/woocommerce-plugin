@@ -438,7 +438,7 @@ function woocommerce_bitpay_init()
             $this->log('    [Info] Entered save_order_states()...');
 
             $bp_statuses = array(
-                'new'      => 'New Order',            	
+                'new'      => 'New Order',
                 'paid'      => 'Paid',
                 'confirmed' => 'Confirmed',
                 'complete'  => 'Complete',
