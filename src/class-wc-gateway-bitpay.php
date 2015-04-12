@@ -872,7 +872,7 @@ function woocommerce_bitpay_init()
 
             $order_states = $this->get_option('order_states');
 
-            $new_order_status      = $order_states['new'];
+            $new_order_status = $order_states['new'];
             $paid_status      = $order_states['paid'];
             $confirmed_status = $order_states['confirmed'];
             $complete_status  = $order_states['complete'];
